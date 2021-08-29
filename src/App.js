@@ -10,6 +10,7 @@ import { Route } from 'react-router-dom';
 import CounterVal from './Counter/Counter';
 import { useSelector,useDispatch } from 'react-redux';
 import { getDataAction } from './Redux/actions/employeeActions';
+import AddEmployee from './searchEmployee/components/Employee/AddEmployee';
 function App() {
   const dispatch=useDispatch();
   useEffect(()=>{
@@ -26,6 +27,7 @@ function App() {
     <Route path="/memo" component={MemoComponent}/>
     <Route path="/employee/:id" render={(props) => <EmployeeDetails {...props} userData={userData}/>}/>
     <Route path="/CountVal" component={CounterVal}/>
+    <Route path="/addEmp" component={AddEmployee}/>
      </>
   );
 }

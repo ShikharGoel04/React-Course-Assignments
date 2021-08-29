@@ -14,5 +14,6 @@ export const getDataAction = () => (dispatch) => {
     }
   
     }
+    
   
 

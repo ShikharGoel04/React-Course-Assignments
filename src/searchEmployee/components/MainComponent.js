@@ -1,5 +1,6 @@
 import React, {useState,useEffect, useMemo} from 'react'
 import EmployeeList from './EmployeeList/EmployeeList';
+import { Link } from 'react-router-dom';
 export default function MainEmp({userData}) {
 
 
@@ -19,7 +20,7 @@ const[showBorder,setShowBorder]=useState(false);
       </div>
 
       {userData.length > 0 ? <EmployeeList data={data} /> : <h1>Loading....</h1>}
-    
+      <Link to="/addEmp"><button>Add Employee</button></Link>
       <button onClick={()=> setShowBorder(!showBorder)}>Change the Heading Border</button>
     </>
   );
