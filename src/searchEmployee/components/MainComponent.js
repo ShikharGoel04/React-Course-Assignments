@@ -1,16 +1,11 @@
 import React, {useState,useEffect, useMemo} from 'react'
 import EmployeeList from './EmployeeList/EmployeeList';
-export default function MainEmp() {
+export default function MainEmp({userData}) {
 
-const [userData,setUserData] =useState([]);
+
 const [search,setSearch] = useState('');
 const[showBorder,setShowBorder]=useState(false);
-useEffect(()=>{
-    console.log("userdata.....")
-    fetch('https://jsonplaceholder.typicode.com/users')
-    .then((data) => data.json())
-    .then((res) => setUserData(res));
-  },[])
+
   const [data,setData]=useState([]);
   useMemo(() => {
      setData(search ? userData.filter((item) => item.name.includes(search)) : userData);

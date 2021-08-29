@@ -8,6 +8,7 @@ const Home = props => (
         <Link to="/portfolio"><p className="home-body">Portfolio</p></Link>
         <Link to="/counter"><p className="home-body">Timer Counter</p></Link>
         <Link to="/memo"><p className="home-body">Memo</p></Link>
+        <Link to="/CountVal"><p className="home-body">Counter</p></Link>
 
     </div>
 )
