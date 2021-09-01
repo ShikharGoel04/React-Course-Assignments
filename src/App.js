@@ -17,7 +17,11 @@ function App() {
    dispatch(getDataAction())
   },[])
   const Data=useSelector((state) => state.userData);
+
   const {userData} =Data;
+  const addEmployee=useSelector((state) => state.addEmployee)
+  const {newUserData} = addEmployee
+  userData.push(newUserData)
   return (
    <>
     <Route exact path="/" component={Home}/>
