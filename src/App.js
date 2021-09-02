@@ -21,9 +21,15 @@ function App() {
   const {userData} =Data;
   const addEmployee=useSelector((state) => state.addEmployee)
   const {newUserData} = addEmployee
-  userData.push(newUserData)
+  // userData?userData.push(newUserData):'';
+  console.log("userData",userData);
+  console.log("newUserData",newUserData);
+  // userData.push(newUserData)
+  
   return (
+   
    <>
+   
     <Route exact path="/" component={Home}/>
     <Route exact path="/employee" render={() => <MainEmp userData={userData}/>}/>
     <Route path="/portfolio" component={Portfolio}/>

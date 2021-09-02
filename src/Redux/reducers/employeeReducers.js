@@ -3,7 +3,7 @@ export const userDataReducer=(state={userData:[]},action) => {
     switch(action.type)
     {
         case EMPLOYEE_DATA_REQUEST:
-            return  {...state, loading:true}
+            return  {state, loading:true}
 
         case EMPLOYEE_DATA_SUCCESS:
             console.log("success",action.payload)
