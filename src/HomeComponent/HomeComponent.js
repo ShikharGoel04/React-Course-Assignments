@@ -9,6 +9,8 @@ const Home = props => (
         <Link to="/counter"><p className="home-body">Timer Counter</p></Link>
         <Link to="/memo"><p className="home-body">Memo</p></Link>
         <Link to="/CountVal"><p className="home-body">Counter</p></Link>
+        <Link to="/RefApp"><p className="home-body">ToDo</p></Link>
+        <Link to="/typeCheck"><p className="home-body">TypeChecking</p></Link>
 
     </div>
 )

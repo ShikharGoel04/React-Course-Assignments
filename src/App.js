@@ -11,6 +11,11 @@ import CounterVal from './Counter/Counter';
 import { useSelector,useDispatch } from 'react-redux';
 import { getDataAction } from './Redux/actions/employeeActions';
 import AddEmployee from './searchEmployee/components/Employee/AddEmployee';
+import Practise from './Ref/createRef';
+import RefPractise from './Ref/useRef';
+import RefApplication from './Ref/RefApplication';
+import TypeChecking from './TypeChecking/Main';
+import ErrorBoundary from './ErrorBoundary';
 function App() {
   const dispatch=useDispatch();
   useEffect(()=>{
@@ -29,7 +34,7 @@ function App() {
   return (
    
    <>
-   
+   <ErrorBoundary>
     <Route exact path="/" component={Home}/>
     <Route exact path="/employee" render={() => <MainEmp userData={userData}/>}/>
     <Route path="/portfolio" component={Portfolio}/>
@@ -38,6 +43,11 @@ function App() {
     <Route path="/employee/:id" render={(props) => <EmployeeDetails {...props} userData={userData}/>}/>
     <Route path="/CountVal" component={CounterVal}/>
     <Route path="/addEmp" component={AddEmployee}/>
+    <Route path="/practise" component={Practise}/>
+    <Route path="/Refpractise" component={RefPractise}/>
+    <Route path="/RefApp" component={RefApplication}/>
+    <Route path="/typeCheck" component={TypeChecking}/>
+    </ErrorBoundary>
      </>
   );
 }
